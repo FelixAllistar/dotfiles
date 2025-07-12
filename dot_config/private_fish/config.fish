@@ -33,8 +33,12 @@ function gitc --description "Quick git add, commit, and push"
 end
 
 # Pyenv setup
-pyenv init - fish | source
-
+# Pyenv setup
+set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PATH $PYENV_ROOT/bin $PATH
+if command -v pyenv >/dev/null
+    pyenv init - fish | source
+end
 # Custom AI function
 function ai --description "Suggest and optionally run a Linux command from English input"
     set QUERY "Provide only the Linux command for: $argv"
