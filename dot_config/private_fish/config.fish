@@ -19,7 +19,7 @@ set -x ANDROID_HOME ~/Android/Sdk
 set -x NDK_HOME ~/Android/Sdk/ndk
 set -x PATH /usr/local/bin ~/.local/bin $ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools /usr/lib/at-spi2-core $PATH
 set -x LD_LIBRARY_PATH /home/felix/projects/VibeCodin/venv/lib/python3.12/site-packages/nvidia/cublas/lib:/home/felix/projects/VibeCodin/venv/lib/python3.12/site-packages/nvidia/cudnn/lib
-
+fish_add_path -a ~/bin
 # Aliases
 fastfetch
 alias startback="cd backend && source venv/bin/activate.fish && python run.py"
